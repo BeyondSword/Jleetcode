@@ -8,14 +8,19 @@
  * };
  */
 int maxDepth(struct TreeNode* root) {
-    int Depth = 1;
+	if(root == NULL)
+	{
+		return 0;
+	}
+	int Depth = 1;
 	Depth = getDepth(root, Depth);
 	return Depth;
 }
 
 int getDepth(struct TreeNode* node, int length)
 {
-	struct TreeNode* left_child,right_child;
+	struct TreeNode* left_child;
+	struct TreeNode* right_child;
 	int right_len = length, left_len = length;
 	left_child = node->left;
 	if(left_child != NULL)
