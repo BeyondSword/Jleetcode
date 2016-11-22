@@ -8,28 +8,28 @@ int rob(int* nums, int numsSize)
     }
 }
 
-int cmp4(int* nums, int numsSize, int pos, sum1, sum2)
+int cmp2(int* nums, int MaxPos, int pos, sum1, sum2)
 {
-	if(pos + 4 < numsSize)
+	if(pos == MaxPos)
 	{
-		if(nums[pos] > nums[pos + 1])
+		sum1 += nums[pos];
+		return sum1>sum2?sum1:sum2;
+	}
+	if(pos + 1 == MaxPos)
+	{
+		if(nums[pos]>num[pos+1])
 		{
-			sum1 += num[pos] + num[pos + 3];
+			sum1 += nums[pos];
 		}
 		else
 		{
-			sum1 += num[pos + 1] + num[pos + 3];
+			sum1 += nums[pos+1];
 		}
-		pos += 5;
-		
-	return cmp4();
-
-
-
-	}
-	else
-	{
+		sum2 += nums[pos+1];
 		return sum1>sum2?sum1:sum2;
 	}
-
+	if(pos + 1 < MaxPos)
+	{
+		sum1 
+	}
 }
